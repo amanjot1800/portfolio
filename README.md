@@ -1,7 +1,5 @@
 # amanjots.com
 
-Personal portfolio of Amanjot Singh, full-stack developer.
-
 Built with Next.js, TypeScript and Tailwind CSS. Deployed on Vercel.
 
 ## Development
