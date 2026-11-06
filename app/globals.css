@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0b0c;
+  --fg: #f2f0ea;
+  --muted: #8d8b85;
+  --accent: #c6ff3d;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
