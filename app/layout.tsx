@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Footer } from "@/components/layout/footer";
 import { Nav } from "@/components/layout/nav";
 import { profile } from "@/data/profile";
 import "./globals.css";
@@ -23,9 +24,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${display.variable} ${mono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-sans">
+      <body id="top" className="flex min-h-full flex-col font-sans">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
