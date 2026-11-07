@@ -17,7 +17,7 @@ export default function Home() {
             Open to full-time roles
           </p>
         )}
-        <h1 className="text-[clamp(3.5rem,15vw,13rem)] font-bold leading-[0.85] tracking-tighter uppercase">
+        <h1 className="text-display-xl font-bold uppercase">
           {first}
           <br />
           <span className="text-accent">{last}.</span>

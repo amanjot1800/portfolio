@@ -1,23 +1,59 @@
 @import "tailwindcss";
 
+/* ---------- Tokens ---------- */
 :root {
   --bg: #0b0b0c;
+  --surface: #151514;
+  --line: #262523;
+  --line-strong: #3a3936;
   --fg: #f2f0ea;
-  --muted: #8d8b85;
+  --muted: #a3a19b;
   --accent: #c6ff3d;
+  --accent-fg: #0b0b0c;
+
+  --nav-h: 4.5rem;
 }
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
   --color-fg: var(--fg);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+
   --font-sans: var(--font-display);
   --font-mono: var(--font-mono);
+
+  /* Display type scale: fluid between phone and desktop */
+  --text-display-xl: clamp(3.5rem, 15vw, 13rem);
+  --text-display-xl--line-height: 0.85;
+  --text-display-xl--letter-spacing: -0.05em;
+  --text-display-lg: clamp(2.75rem, 7vw, 6rem);
+  --text-display-lg--line-height: 0.9;
+  --text-display-lg--letter-spacing: -0.04em;
+  --text-display-md: clamp(2rem, 4vw, 3.5rem);
+  --text-display-md--line-height: 1;
+  --text-display-md--letter-spacing: -0.03em;
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.4;
+
+  --radius-card: 1.75rem;
 }
 
+/* ---------- Base ---------- */
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -27,5 +63,11 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: var(--bg);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
