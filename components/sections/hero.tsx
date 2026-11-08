@@ -1,3 +1,4 @@
+import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { profile } from "@/data/profile";
 
@@ -21,6 +22,12 @@ export function Hero() {
         <p className="mt-10 max-w-xl text-lg text-muted sm:text-xl">
           <span className="text-fg">{profile.role}.</span> {profile.tagline}
         </p>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <ButtonLink href={`mailto:${profile.email}`}>Get in touch ↗</ButtonLink>
+          <ButtonLink href={profile.links.github} variant="outline" external>
+            See my GitHub
+          </ButtonLink>
+        </div>
       </Container>
     </section>
   );
