@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { sectionLinks } from "@/data/navigation";
 import { profile } from "@/data/profile";
 
 export function Nav() {
@@ -11,6 +12,12 @@ export function Nav() {
         </Link>
 
         <nav aria-label="Main" className="flex items-center gap-6">
+          {sectionLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="transition-colors hover:text-accent">
+              {link.label}
+            </Link>
+          ))}
+          <span className="hidden h-4 w-px bg-line-strong sm:block" aria-hidden="true" />
           <a
             href={profile.links.github}
             target="_blank"
