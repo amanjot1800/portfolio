@@ -41,6 +41,17 @@
   --text-eyebrow--line-height: 1.4;
 
   --radius-card: 1.75rem;
+
+  --animate-marquee: marquee 45s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* ---------- Base ---------- */
