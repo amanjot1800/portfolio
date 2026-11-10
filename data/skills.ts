@@ -40,8 +40,8 @@ export const skillGroups: SkillGroup[] = [
     skills: ["Azure", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Azure Automation", "Power Automate", "AWS"],
   },
   {
-    title: "AI",
-    skills: ["Claude API", "Claude Agent SDK", "LLM Applications", "GitHub Copilot", "Cursor"],
+    title: "AI & ML",
+    skills: ["Claude API", "Claude Agent SDK", "PyTorch", "LLM Applications", "GitHub Copilot", "Cursor"],
   },
   {
     title: "Testing & Practices",
