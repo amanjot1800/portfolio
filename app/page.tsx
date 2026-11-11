@@ -1,3 +1,4 @@
+import { Experience } from "@/components/sections/experience";
 import { Hero } from "@/components/sections/hero";
 import { Skills } from "@/components/sections/skills";
 import { Marquee } from "@/components/ui/marquee";
@@ -8,7 +9,8 @@ export default function Home() {
     <main className="flex flex-1 flex-col overflow-x-clip">
       <Hero />
       <Marquee items={coreSkills} label="Core stack" />
-      <Skills index="01" />
+      <Experience index="01" />
+      <Skills index="02" />
     </main>
   );
 }

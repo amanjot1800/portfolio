@@ -1,5 +1,5 @@
 export type Highlight = {
-  /** Short, verb-first outcome. Shown in the accent colour. */
+  /** Short, verb-first outcome. Shown as a bold headline. */
   headline: string;
   detail: string;
 };
