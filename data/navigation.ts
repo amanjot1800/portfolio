@@ -4,4 +4,7 @@ export type NavLink = {
 };
 
 /** Page sections shown in the nav, in page order. */
-export const sectionLinks: NavLink[] = [{ label: "Skills", href: "/#skills" }];
+export const sectionLinks: NavLink[] = [
+  { label: "Experience", href: "/#experience" },
+  { label: "Skills", href: "/#skills" },
+];
