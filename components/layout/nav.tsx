@@ -13,7 +13,7 @@ export function Nav() {
 
         <nav aria-label="Main" className="flex items-center gap-6">
           {sectionLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="transition-colors hover:text-accent">
+            <Link key={link.href} href={link.href} className="hidden transition-colors hover:text-accent sm:inline">
               {link.label}
             </Link>
           ))}
@@ -36,7 +36,7 @@ export function Nav() {
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex min-h-11 items-center rounded-full border border-accent px-4 text-accent transition-colors hover:bg-accent hover:text-accent-fg"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full border border-accent px-4 text-accent transition-colors hover:bg-accent hover:text-accent-fg"
           >
             Say hello ↗
           </a>
