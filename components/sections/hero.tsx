@@ -28,9 +28,9 @@ export function Hero() {
             <span className="text-fg">{profile.role}.</span> {profile.tagline}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={`mailto:${profile.email}`}>Get in touch ↗</ButtonLink>
-            <ButtonLink href={profile.links.github} variant="outline" external>
-              See my GitHub
+            <ButtonLink href="#work">View my work ↓</ButtonLink>
+            <ButtonLink href={`mailto:${profile.email}`} variant="outline">
+              Get in touch ↗
             </ButtonLink>
           </div>
         </div>
