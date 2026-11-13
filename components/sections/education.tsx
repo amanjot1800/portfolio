@@ -29,13 +29,18 @@ export function Education({ index }: { index: string }) {
             </ul>
 
             {school.courses.length > 0 && (
-              <div className="mt-auto border-t border-line pt-6">
+              <div className="border-t border-line pt-6">
                 <h4 className="mb-4 font-mono text-eyebrow uppercase tracking-widest text-muted">Relevant courses</h4>
-                <ul className="grid gap-x-6 gap-y-2 text-base sm:grid-cols-2">
+                <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
                   {school.courses.map((course) => (
-                    <li key={course} className="flex gap-3">
-                      <span className="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                      {course}
+                    <li key={course.code} className="flex flex-col gap-0.5">
+                      <span className="flex flex-wrap items-center gap-2 font-mono text-xs text-muted">
+                        {course.code}
+                        {course.note && (
+                          <span className="rounded-full bg-accent px-2 py-0.5 text-accent-fg">{course.note}</span>
+                        )}
+                      </span>
+                      <span className="text-base leading-snug">{course.name}</span>
                     </li>
                   ))}
                 </ul>
