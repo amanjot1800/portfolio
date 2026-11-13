@@ -5,6 +5,8 @@ export type School = {
   location: string;
   start: string;
   end: string;
+  /** Relevant courses, shown as a list under the school. Hidden when empty. */
+  courses: string[];
 };
 
 export const education: School[] = [
@@ -15,6 +17,7 @@ export const education: School[] = [
     location: "Ottawa, ON",
     start: "Sep 2024",
     end: "Apr 2028 (expected)",
+    courses: [],
   },
   {
     school: "Algonquin College",
@@ -23,5 +26,6 @@ export const education: School[] = [
     location: "Ottawa, ON",
     start: "May 2019",
     end: "Apr 2021",
+    courses: [],
   },
 ];
