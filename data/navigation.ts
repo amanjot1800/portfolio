@@ -8,6 +8,7 @@ export const sectionLinks: NavLink[] = [
   { label: "Work", href: "/#work" },
   { label: "Experience", href: "/#experience" },
   { label: "Skills", href: "/#skills" },
-  { label: "About", href: "/#about" },
+  { label: "Education", href: "/#education" },
+  { label: "Giving back", href: "/#giving-back" },
   { label: "Contact", href: "/#contact" },
 ];

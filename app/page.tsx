@@ -1,6 +1,7 @@
-import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
+import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
+import { GivingBack } from "@/components/sections/giving-back";
 import { Hero } from "@/components/sections/hero";
 import { Skills } from "@/components/sections/skills";
 import { Work } from "@/components/sections/work";
@@ -15,8 +16,9 @@ export default function Home() {
       <Work index="01" />
       <Experience index="02" />
       <Skills index="03" />
-      <About index="04" />
-      <Contact index="05" />
+      <Education index="04" />
+      <GivingBack index="05" />
+      <Contact index="06" />
     </main>
   );
 }
