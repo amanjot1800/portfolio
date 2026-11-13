@@ -29,8 +29,8 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="#work">View my work ↓</ButtonLink>
-            <ButtonLink href={`mailto:${profile.email}`} variant="outline">
-              Get in touch ↗
+            <ButtonLink href={profile.resume} variant="outline" download>
+              Download resume
             </ButtonLink>
           </div>
         </div>
