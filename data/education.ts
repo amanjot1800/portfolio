@@ -1,0 +1,27 @@
+export type School = {
+  school: string;
+  credential: string;
+  details: string[];
+  location: string;
+  start: string;
+  end: string;
+};
+
+export const education: School[] = [
+  {
+    school: "Carleton University",
+    credential: "B.S. Computer Science, AI & ML stream",
+    details: ["Mathematics minor", "Third-year standing", "GPA 11.42 / 12"],
+    location: "Ottawa, ON",
+    start: "Sep 2024",
+    end: "Apr 2028 (expected)",
+  },
+  {
+    school: "Algonquin College",
+    credential: "Computer Programming diploma",
+    details: ["GPA 3.92 / 4"],
+    location: "Ottawa, ON",
+    start: "May 2019",
+    end: "Apr 2021",
+  },
+];
