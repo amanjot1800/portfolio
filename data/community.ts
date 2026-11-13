@@ -12,7 +12,7 @@ export const community: Volunteering[] = [
     years: "2024 – 2026",
     impact: "100,000+ lbs",
     description:
-      "of food packed and delivered to more than 20 food banks and housing communities through annual food drives.",
+      "of food packed and delivered to more than 20 food banks and housing communities through annual food drives",
   },
   {
     organization: "Bluesfest",

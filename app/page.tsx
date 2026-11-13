@@ -1,3 +1,4 @@
+import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Hero } from "@/components/sections/hero";
 import { Skills } from "@/components/sections/skills";
@@ -13,6 +14,7 @@ export default function Home() {
       <Work index="01" />
       <Experience index="02" />
       <Skills index="03" />
+      <About index="04" />
     </main>
   );
 }
