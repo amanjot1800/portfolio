@@ -6,5 +6,5 @@ export const contact = {
    * Formspree form ID (the part after formspree.io/f/). Leave empty to hide the form
    * and show email only.
    */
-  formspreeId: "",
+  formspreeId: "mqpqedal",
 };
