@@ -1,6 +1,8 @@
 export type School = {
   school: string;
   credential: string;
+  /** Shown on its own line under the credential. */
+  minor?: string;
   details: string[];
   location: string;
   start: string;
@@ -13,7 +15,8 @@ export const education: School[] = [
   {
     school: "Carleton University",
     credential: "B.S. Computer Science, AI & ML stream",
-    details: ["Mathematics minor", "Third-year standing", "GPA 11.42 / 12"],
+    minor: "Mathematics minor",
+    details: ["Third-year standing", "GPA 11.42 / 12"],
     location: "Ottawa, ON",
     start: "Sep 2024",
     end: "Apr 2028 (expected)",

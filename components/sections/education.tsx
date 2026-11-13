@@ -16,6 +16,7 @@ export function Education({ index }: { index: string }) {
               </p>
               <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">{school.school}</h3>
               <p className="text-lg">{school.credential}</p>
+              {school.minor && <p className="text-lg text-muted">{school.minor}</p>}
               <p className="font-mono text-eyebrow text-muted">{school.location}</p>
             </div>
 
