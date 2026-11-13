@@ -11,4 +11,5 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/amanjot1800",
   },
   siteUrl: "https://amanjots.com",
+  resume: "/Amanjot-Singh-Resume.pdf",
 } as const;
