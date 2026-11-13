@@ -13,16 +13,16 @@ export function Nav() {
 
         <nav aria-label="Main" className="flex items-center gap-6">
           {sectionLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hidden transition-colors hover:text-accent sm:inline">
+            <Link key={link.href} href={link.href} className="hidden transition-colors hover:text-accent md:inline">
               {link.label}
             </Link>
           ))}
-          <span className="hidden h-4 w-px bg-line-strong sm:block" aria-hidden="true" />
+          <span className="hidden h-4 w-px bg-line-strong lg:block" aria-hidden="true" />
           <a
             href={profile.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden transition-colors hover:text-accent sm:inline"
+            className="hidden transition-colors hover:text-accent lg:inline"
           >
             GitHub
           </a>
@@ -30,7 +30,7 @@ export function Nav() {
             href={profile.links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden transition-colors hover:text-accent sm:inline"
+            className="hidden transition-colors hover:text-accent lg:inline"
           >
             LinkedIn
           </a>
