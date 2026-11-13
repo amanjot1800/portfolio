@@ -6,7 +6,6 @@ export type ImpactStat = {
 export type Volunteering = {
   organization: string;
   role: string;
-  /** Leave out when unknown rather than guessing. */
   years?: string;
   /** Headline figure shown large, followed by `description`. */
   impact?: string;
@@ -57,11 +56,13 @@ export const givingBack: Volunteering[] = [
   {
     organization: "Canadian Tulip Festival",
     role: "Event volunteer",
+    years: "2019",
     description: "Directed traffic and guided visitors around the festival.",
   },
   {
     organization: "Algonquin College",
     role: "Student volunteer",
+    years: "2019 – 2021",
     activities: ["Residence move-in", "AC Day 1", "Orientation Day", "Student Leadership Program"],
   },
 ];
