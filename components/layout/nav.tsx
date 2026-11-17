@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { MobileMenu } from "@/components/layout/mobile-menu";
 import { sectionLinks } from "@/data/navigation";
 import { profile } from "@/data/profile";
 
@@ -40,6 +41,7 @@ export function Nav() {
           >
             Say hello ↗
           </a>
+          <MobileMenu />
         </nav>
       </Container>
     </header>

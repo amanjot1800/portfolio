@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
+import { MotionProvider } from "@/components/layout/motion-provider";
 import { Nav } from "@/components/layout/nav";
 import { profile } from "@/data/profile";
 import "./globals.css";
@@ -25,9 +26,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${display.variable} ${mono.variable} h-full antialiased`}>
       <body id="top" className="flex min-h-full flex-col font-sans">
-        <Nav />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );
