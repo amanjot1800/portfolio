@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Cursor } from "@/components/layout/cursor";
 import { Footer } from "@/components/layout/footer";
 import { MotionProvider } from "@/components/layout/motion-provider";
 import { Nav } from "@/components/layout/nav";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Nav />
           {children}
           <Footer />
+          <Cursor />
         </MotionProvider>
       </body>
     </html>
