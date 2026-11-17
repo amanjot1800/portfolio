@@ -25,6 +25,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${display.variable} ${mono.variable} h-full antialiased`}>
+      <head>
+        {/* Without JavaScript, scroll-reveal content would stay hidden: show it. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body id="top" className="flex min-h-full flex-col font-sans">
         <MotionProvider>
           <Nav />

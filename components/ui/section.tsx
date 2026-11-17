@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Container } from "./container";
+import { Reveal } from "./reveal";
 
 type SectionProps = {
   id: string;
@@ -14,7 +15,7 @@ export function Section({ id, index, eyebrow, title, action, children }: Section
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="py-12 sm:py-16">
       <Container>
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-4 sm:mb-16">
+        <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-4 sm:mb-16">
           <div>
             <p className="mb-3 font-mono text-eyebrow text-accent">
               {index} / {eyebrow}
@@ -24,8 +25,8 @@ export function Section({ id, index, eyebrow, title, action, children }: Section
             </h2>
           </div>
           {action}
-        </div>
-        {children}
+        </Reveal>
+        <Reveal delay={0.1}>{children}</Reveal>
       </Container>
     </section>
   );
