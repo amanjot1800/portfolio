@@ -28,6 +28,8 @@ export const education: School[] = [
     start: "Sep 2024",
     end: "Apr 2028 (expected)",
     courses: [
+      { code: "COMP 3105", name: "Intro to Artificial Intelligence" },
+      { code: "COMP 3106", name: "Intro to Machine Learning" },
       { code: "COMP 2406", name: "Fundamentals of Web Applications" },
       { code: "COMP 3005", name: "Database Management Systems" },
       { code: "COMP 3004", name: "Object-Oriented Software Engineering" },

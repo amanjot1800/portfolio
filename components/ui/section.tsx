@@ -12,7 +12,7 @@ type SectionProps = {
 
 export function Section({ id, index, eyebrow, title, action, children }: SectionProps) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="py-24 sm:py-32">
+    <section id={id} aria-labelledby={`${id}-title`} className="py-12 sm:py-16">
       <Container>
         <div className="mb-12 flex flex-wrap items-end justify-between gap-4 sm:mb-16">
           <div>

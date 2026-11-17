@@ -14,8 +14,8 @@ export function Contact({ index }: { index: string }) {
       title={
         <>
           Let&apos;s build
-          <br />
-          <span className="text-accent">something.</span>
+          {/* <br /> */}
+          <span className="text-accent"> something.</span>
         </>
       }
     >

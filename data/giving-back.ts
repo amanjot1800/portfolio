@@ -63,6 +63,6 @@ export const givingBack: Volunteering[] = [
     organization: "Algonquin College",
     role: "Student volunteer",
     years: "2019 – 2021",
-    activities: ["Residence move-in", "AC Day 1", "Orientation Day", "Student Leadership Program"],
+    description: "Residence move-in, AC Day 1, Orientation Day, Student Leadership Program",
   },
 ];

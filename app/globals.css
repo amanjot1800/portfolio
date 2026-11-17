@@ -8,7 +8,11 @@
   --line-strong: #3a3936;
   --fg: #f2f0ea;
   --muted: #a3a19b;
+  /* --accent: #c6ff3d; */
+  --accent-0: #ff7a3d;
   --accent: #c6ff3d;
+  --accent-2: #3dd8ff;
+  --accent-3: #a78bfa;
   --accent-fg: #0b0b0c;
 
   --nav-h: 4.5rem;

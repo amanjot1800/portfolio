@@ -16,7 +16,7 @@ export function Education({ index }: { index: string }) {
               </p>
               <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">{school.school}</h3>
               <p className="text-lg">{school.credential}</p>
-              {school.minor && <p className="text-lg text-muted">{school.minor}</p>}
+              {school.minor && <p className="text-lg">{school.minor}</p>}
               <p className="font-mono text-eyebrow text-muted">{school.location}</p>
             </div>
 
@@ -34,12 +34,6 @@ export function Education({ index }: { index: string }) {
                 <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
                   {school.courses.map((course) => (
                     <li key={course.code} className="flex flex-col gap-0.5">
-                      <span className="flex flex-wrap items-center gap-2 font-mono text-xs text-muted">
-                        {course.code}
-                        {course.note && (
-                          <span className="rounded-full bg-accent px-2 py-0.5 text-accent-fg">{course.note}</span>
-                        )}
-                      </span>
                       <span className="text-base leading-snug">{course.name}</span>
                     </li>
                   ))}
