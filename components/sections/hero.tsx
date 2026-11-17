@@ -1,5 +1,6 @@
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
+import { Magnetic } from "@/components/ui/magnetic";
 import { NowPanel } from "@/components/ui/now-panel";
 import { profile } from "@/data/profile";
 
@@ -28,10 +29,14 @@ export function Hero() {
             <span className="text-fg">{profile.role}.</span> {profile.tagline}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href="#work">View my work ↓</ButtonLink>
-            <ButtonLink href={profile.resume} variant="outline" download>
-              Download resume
-            </ButtonLink>
+            <Magnetic>
+              <ButtonLink href="#work">View my work ↓</ButtonLink>
+            </Magnetic>
+            <Magnetic>
+              <ButtonLink href={profile.resume} variant="outline" download>
+                Download resume
+              </ButtonLink>
+            </Magnetic>
           </div>
         </div>
 
