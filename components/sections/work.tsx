@@ -1,4 +1,5 @@
 import { Section } from "@/components/ui/section";
+import { Tilt } from "@/components/ui/tilt";
 import { profile } from "@/data/profile";
 import { projects, type Project } from "@/data/projects";
 
@@ -54,54 +55,56 @@ function ProjectCard({ project }: { project: Project }) {
   const muted = accent ? "text-accent-fg/75" : "text-muted";
 
   return (
-    <article
-      className={`flex h-full flex-col gap-6 rounded-card border p-6 sm:p-8 ${
-        accent ? "border-transparent bg-accent text-accent-fg" : "border-line bg-surface"
-      } ${project.featured ? "lg:col-span-2 lg:row-span-2" : ""}`}
-    >
-      <p className={`font-mono text-eyebrow uppercase tracking-widest ${muted}`}>{project.eyebrow}</p>
+    <Tilt className={project.featured ? "lg:col-span-2 lg:row-span-2" : undefined}>
+      <article
+        className={`flex h-full flex-col gap-6 rounded-card border p-6 sm:p-8 ${
+          accent ? "border-transparent bg-accent text-accent-fg" : "border-line bg-surface"
+        }`}
+      >
+        <p className={`font-mono text-eyebrow uppercase tracking-widest ${muted}`}>{project.eyebrow}</p>
 
-      {project.visual === "chart" && <ChartVisual />}
+        {project.visual === "chart" && <ChartVisual />}
 
-      <div className="flex flex-col gap-3">
-        <h3 className={`font-bold ${project.featured ? "text-display-md" : "text-3xl leading-tight tracking-tight"}`}>
-          {project.title}
-        </h3>
-        {project.outcome && <p className="text-xl font-bold leading-snug sm:text-2xl">{project.outcome}</p>}
-        <p className={`max-w-2xl text-base leading-relaxed sm:text-lg ${muted}`}>{project.summary}</p>
-      </div>
-
-      {project.visual === "flow" && project.flow && <FlowVisual steps={project.flow} />}
-
-      <ul className="mt-auto flex flex-wrap gap-2" aria-label={`Built with`}>
-        {project.stack.map((tech) => (
-          <li
-            key={tech}
-            className={`rounded-full border px-3 py-1 font-mono text-xs ${
-              accent ? "border-accent-fg/30" : "border-line-strong text-muted"
-            }`}
-          >
-            {tech}
-          </li>
-        ))}
-      </ul>
-
-      {project.links && project.links.length > 0 && (
-        <div className="flex flex-wrap gap-5 font-mono text-sm">
-          {project.links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline-offset-4 hover:underline"
-            >
-              {link.label} ↗
-            </a>
-          ))}
+        <div className="flex flex-col gap-3">
+          <h3 className={`font-bold ${project.featured ? "text-display-md" : "text-3xl leading-tight tracking-tight"}`}>
+            {project.title}
+          </h3>
+          {project.outcome && <p className="text-xl font-bold leading-snug sm:text-2xl">{project.outcome}</p>}
+          <p className={`max-w-2xl text-base leading-relaxed sm:text-lg ${muted}`}>{project.summary}</p>
         </div>
-      )}
-    </article>
+
+        {project.visual === "flow" && project.flow && <FlowVisual steps={project.flow} />}
+
+        <ul className="mt-auto flex flex-wrap gap-2" aria-label={`Built with`}>
+          {project.stack.map((tech) => (
+            <li
+              key={tech}
+              className={`rounded-full border px-3 py-1 font-mono text-xs ${
+                accent ? "border-accent-fg/30" : "border-line-strong text-muted"
+              }`}
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
+
+        {project.links && project.links.length > 0 && (
+          <div className="flex flex-wrap gap-5 font-mono text-sm">
+            {project.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                {link.label} ↗
+              </a>
+            ))}
+          </div>
+        )}
+      </article>
+    </Tilt>
   );
 }
 
