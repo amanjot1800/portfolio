@@ -8,8 +8,9 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-bg/70 backdrop-blur-md">
       <Container className="flex h-(--nav-h) items-center justify-between gap-6 font-mono text-sm">
-        <Link href="/" className="text-base font-medium" aria-label={`${profile.name}, home`}>
+        <Link href="/" className="text-base font-medium">
           AS<span className="text-accent">/</span>
+          <span className="sr-only"> {profile.name}, home</span>
         </Link>
 
         <nav aria-label="Main" className="flex items-center gap-6">

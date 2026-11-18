@@ -139,6 +139,7 @@ export function MobileMenu() {
                     className="text-base font-medium"
                   >
                     AS<span className="text-accent">/</span>
+                    <span className="sr-only"> {profile.name}, home</span>
                   </Link>
                   <button
                     type="button"
