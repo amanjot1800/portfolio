@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Cursor } from "@/components/layout/cursor";
@@ -65,6 +67,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
           <Footer />
           <Cursor />
+          <Analytics />
+          <SpeedInsights />
         </MotionProvider>
       </body>
     </html>
