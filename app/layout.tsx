@@ -17,10 +17,37 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const title = `${profile.name} · ${profile.role}`;
+const description = `${profile.name} is a full-stack developer in ${profile.location}. ${profile.tagline}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
-  title: `${profile.name} · ${profile.role}`,
-  description: profile.tagline,
+  title: { default: title, template: `%s · ${profile.name}` },
+  description,
+  applicationName: profile.name,
+  authors: [{ name: profile.name, url: profile.siteUrl }],
+  creator: profile.name,
+  keywords: [
+    profile.name,
+    "full-stack developer",
+    "software engineer",
+    "Java",
+    "Spring Boot",
+    "React",
+    "TypeScript",
+    "Ottawa",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: profile.name,
+    title,
+    description,
+    locale: "en_CA",
+  },
+  twitter: { card: "summary_large_image", title, description },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
