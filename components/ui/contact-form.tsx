@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -23,6 +24,7 @@ export function ContactForm({ formId, email }: { formId: string; email: string }
       if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
       form.reset();
       setStatus("sent");
+      trackEvent("Contact form sent");
     } catch {
       setStatus("error");
     }
