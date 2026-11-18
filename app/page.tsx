@@ -1,3 +1,4 @@
+import { PersonSchema } from "@/components/layout/person-schema";
 import { Contact } from "@/components/sections/contact";
 import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
@@ -11,6 +12,7 @@ import { coreSkills } from "@/data/skills";
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col overflow-x-clip">
+      <PersonSchema />
       <Hero />
       <Marquee items={coreSkills} label="Core stack" />
       <Work index="01" />
